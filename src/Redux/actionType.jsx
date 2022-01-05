@@ -1,4 +1,9 @@
 
 export const appComponent =  {
-    LOGIN_AUTH : "LOGIN_AUTH"
+    LOGIN_AUTH : "LOGIN_AUTH",
+    LOGIN_DATA : "LOGIN_DATA",
+    SEARCH_DATA : "SEARCH_DATA",
+    GIT_REQUEST : "GIT_REQUEST",
+    GIT_SUCCESS : "GIT_SUCCESS",
+    GIT_FAILURE  :"GIT_FAILURE"
 }

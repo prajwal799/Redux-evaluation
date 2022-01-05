@@ -1,18 +1,20 @@
 import {Button} from "@mui/material"
+import { useState } from "react";
 import { useDispatch } from "react-redux"
-import { loginauth } from "../Redux/action";
+import { loginauth, logindata } from "../Redux/action";
 const Login = () => {
+    const [email,setEmail] = useState("");
     const dispatch = useDispatch();
     const login = () => {
-       
-       dispatch(loginauth)
+    
+    dispatch(logindata(setEmail))
     }
     return(
    <div>
        <h3>Login</h3>
-       <input  /><br />
-       <input /><br /><br/>
-       <Button onClick={login}>Login</Button>
+       <input  placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} /><br />
+       <input placeholder="password" type="password" /><br /><br/>
+       <Button onClick={() => login()}>Login</Button>
    </div>
     )
 }
